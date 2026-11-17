@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>سيول SEOUL | قطع غيار السيارات الكورية</title>
+<meta name="theme-color" content="#0E0E0E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--lime:#E2F23A;--lime2:#cfe01f;--blk:#0E0E0E;--blk2:#171717;--blk3:#222;--ink:#111;--muted:#7b7b7b;--bg:#F3F3F1;--line:#E6E6E3;--red:#E5322D;--green:#18a058;--R:22px}
+*{box-sizing:border-box;margin:0;padding:0}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth}
+body{font-family:"Readex Pro",system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.7;font-size:15px;font-weight:400}
+a{color:inherit;text-decoration:none}
+button,input,select,textarea{font:inherit;color:inherit}
+button{cursor:pointer;border:0;background:none}
+.wrap{max-width:1240px;margin:0 auto;padding:0 22px}
+.num{font-variant-numeric:tabular-nums;direction:ltr;unicode-bidi:isolate}
+.skip{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}.skip:focus{width:auto;height:auto;clip:auto;top:8px;right:8px;background:#fff;padding:8px;z-index:99}
+.demo-note{background:var(--lime);color:#111;font-size:12.5px;text-align:center;padding:5px 12px;font-weight:500}
+.lt{font-weight:200}
+h1,h2,h3{font-weight:600}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:10px 22px;border-radius:40px;font-weight:600;font-size:14px;transition:.15s;white-space:nowrap}
+.btn-lime{background:var(--lime);color:#111}.btn-lime:hover{background:var(--lime2)}
+.btn-blk{background:var(--blk);color:#fff}.btn-blk:hover{background:#000}
+.btn-ghost{border:1px solid rgba(255,255,255,.25);color:#fff}.btn-ghost:hover{background:rgba(255,255,255,.08)}
+.btn-line{border:1px solid var(--line);background:#fff}.btn-line:hover{border-color:#bbb}
+.btn-wa{background:#1fa855;color:#fff}
+.circ{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;flex:none;transition:.15s}
+.circ.lime{background:var(--lime);color:#111}.circ.w{background:#fff;color:#111}.circ.b{background:var(--blk);color:#fff}.circ.g{background:var(--bg)}
+.circ.o{border:1px solid rgba(255,255,255,.3);color:#fff}
+
+/* header */
+header.main{background:#fff;position:sticky;top:0;z-index:40;border-bottom:1px solid var(--line)}
+.h1row{display:flex;align-items:center;gap:20px;height:70px}
+.logo{display:flex;align-items:center;gap:10px;white-space:nowrap}
+.lwm{display:flex;flex-direction:column;line-height:1.1}.lwm b{font-size:22px;font-weight:700;letter-spacing:-.3px}.lwm small{font-size:11px;color:#CD2E3A;font-weight:400}
+.logo i{width:34px;height:34px;border-radius:10px;background:var(--blk);display:grid;place-items:center}
+.hsearch{flex:1;max-width:520px;position:relative;margin-inline-start:auto}
+.hsearch input{width:100%;height:44px;border-radius:40px;border:1px solid var(--line);background:var(--bg);padding:0 46px 0 16px;font-size:14px}
+.hsearch input:focus{outline:none;border-color:#111;background:#fff}
+.hsearch svg{position:absolute;right:16px;top:13px;color:var(--muted)}
+.hicons{display:flex;gap:6px;align-items:center}
+.ibtn{position:relative;width:42px;height:42px;border-radius:50%;background:var(--bg);display:grid;place-items:center}
+.ibtn:hover{background:var(--line)}
+.ibtn .badge{position:absolute;top:-2px;left:-2px;background:var(--red);color:#fff;font-size:10.5px;font-weight:700;min-width:18px;height:18px;border-radius:9px;display:grid;place-items:center;padding:0 4px}
+.user{display:flex;align-items:center;gap:8px;font-size:12.5px;line-height:1.3;padding:4px 4px 4px 14px;border:1px solid var(--line);border-radius:40px;margin-inline-start:4px}
+.user:hover{border-color:#111}
+.user .av{width:34px;height:34px;border-radius:50%;background:#1fa855;display:grid;place-items:center}
+.user small{display:block;color:var(--muted)}
+.h2row{display:flex;gap:2px;height:52px;align-items:center;position:relative}
+.catbtn{display:flex;align-items:center;gap:8px;background:var(--blk);color:#fff;border-radius:30px;padding:8px 16px 8px 12px;font-size:13.5px;font-weight:500;white-space:nowrap;margin-inline-end:10px}
+.catbtn:hover,.catbtn[aria-expanded=true]{background:#000}
+.catbtn .chev{transition:.2s}.catbtn[aria-expanded=true] .chev{transform:rotate(180deg)}
+.navlinks{display:flex;gap:2px;align-items:center;min-width:0}
+.navlinks a{font-size:13.5px;color:#444;padding:7px 12px;border-radius:30px;white-space:nowrap;position:relative}
+.navlinks a:hover{background:var(--bg);color:#000}
+.navlinks a.on{color:#000;font-weight:600}
+.navlinks a.on::after{content:"";position:absolute;bottom:0;right:12px;left:12px;height:2px;border-radius:2px;background:var(--blk)}
+.navlinks .hot{font-size:10px;background:var(--red);color:#fff;border-radius:10px;padding:1px 7px;margin-inline-start:7px;vertical-align:1px}
+.h2info{margin-inline-start:auto;display:flex;gap:16px;font-size:12.5px;color:var(--muted);white-space:nowrap}
+.h2info span{display:flex;align-items:center;gap:6px}
+.h2info b{color:#111;font-weight:500}
+/* mega menu */
+.mega{position:absolute;top:100%;right:0;left:0;background:#fff;border:1px solid var(--line);border-radius:0 0 24px 24px;box-shadow:0 30px 60px rgba(0,0,0,.12);padding:22px;display:grid;grid-template-columns:1fr 260px;gap:22px;opacity:0;visibility:hidden;transform:translateY(-6px);transition:.18s;z-index:45}
+.mega.on{opacity:1;visibility:visible;transform:none}
+.mcols{display:grid;grid-template-columns:repeat(4,1fr);gap:6px 18px}
+.mcat{padding:10px;border-radius:16px;transition:.15s}
+.mcat:hover{background:var(--bg)}
+.mcat>button{display:flex;align-items:center;gap:10px;width:100%;text-align:right}
+.mcat .mi{width:38px;height:38px;border-radius:12px;background:var(--bg);display:grid;place-items:center;flex:none}
+.mcat:hover .mi{background:var(--lime)}
+.mcat b{display:block;font-size:14px;font-weight:600;line-height:1.3}
+.mcat small{font-size:11.5px;color:var(--muted)}
+.mcat ul{list-style:none;margin:8px 48px 0 0}
+.mcat li button{font-size:12.5px;color:#555;padding:2px 0;text-align:right}
+.mcat li button:hover{color:#000;text-decoration:underline}
+.mpromo{background:#222 url(img/parts.webp) center bottom/cover;border-radius:18px;color:#fff;padding:20px;position:relative;overflow:hidden;display:flex;flex-direction:column;min-height:240px}
+.mpromo::before{content:"";position:absolute;inset:0;background:linear-gradient(to bottom,rgba(14,14,14,.95) 0,rgba(14,14,14,.5) 55%,rgba(14,14,14,.1))}
+.mpromo>*{position:relative}
+.mpromo small{color:var(--lime);font-size:12px}
+.mpromo h4{font-size:19px;font-weight:300;line-height:1.35;margin:4px 0 12px}.mpromo h4 b{font-weight:600}
+.mfoot{grid-column:1/-1;border-top:1px solid var(--line);padding-top:14px;display:flex;gap:10px;align-items:center;flex-wrap:wrap;font-size:13px;color:var(--muted)}
+.mfoot button{border:1px solid var(--line);border-radius:30px;padding:5px 14px;font-size:12.5px;color:#111}
+.mfoot button:hover{border-color:#111}
+.mback{position:fixed;inset:0;z-index:35;display:none;background:rgba(0,0,0,.25)}.mback.on{display:block}
+/* mobile menu */
+.burger{display:none}
+.mmenu{position:fixed;top:0;bottom:0;right:0;width:min(360px,88%);background:#fff;z-index:61;transform:translateX(105%);transition:.25s;display:flex;flex-direction:column}
+.mmenu.on{transform:none}
+.mmenu .mh{display:flex;justify-content:space-between;align-items:center;padding:16px 18px;border-bottom:1px solid var(--line)}
+.mmenu .mb{flex:1;overflow:auto;padding:14px 18px}
+.mmenu .msearch{position:relative;margin-bottom:14px}
+.mmenu .msearch input{width:100%;height:46px;border-radius:30px;border:1px solid var(--line);background:var(--bg);padding:0 44px 0 16px;font-size:14px}
+.mmenu .msearch svg{position:absolute;right:16px;top:14px;color:var(--muted)}
+.mmenu h6{font-size:12px;color:var(--muted);font-weight:500;margin:14px 0 6px}
+.mmenu .mgrid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.mmenu .mgrid button{display:flex;align-items:center;gap:8px;background:var(--bg);border-radius:14px;padding:10px;font-size:13px;text-align:right}
+.mmenu .mlinks a{display:flex;justify-content:space-between;padding:12px 2px;border-bottom:1px solid var(--line);font-size:14.5px}
+.mmenu .mf{padding:14px 18px;border-top:1px solid var(--line);display:flex;gap:8px}
+
+/* hero */
+.hero{padding:22px 0 10px}
+.hgrid{display:grid;grid-template-columns:2.1fr 1fr;gap:16px}
+.hmain{background:var(--blk);border-radius:28px;position:relative;overflow:hidden;color:#fff;min-height:540px;display:flex;flex-direction:column}
+.hmain .art{position:absolute;inset:0}
+.hmain .art svg{width:100%;height:100%;display:block}
+.hslide{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;transition:opacity .9s ease,transform 6s ease;transform:scale(1.04)}
+.hslide.on{opacity:1;transform:scale(1)}
+.hshade{position:absolute;inset:0;background:linear-gradient(to left,rgba(14,14,14,.95) 0%,rgba(14,14,14,.75) 38%,rgba(14,14,14,.15) 70%,rgba(14,14,14,0) 100%),linear-gradient(to top,rgba(14,14,14,.9) 0%,rgba(14,14,14,0) 40%)}
+.hcar{position:absolute;z-index:3;top:20px;left:20px;display:flex;align-items:center;gap:8px}
+.hcar .lbl{background:rgba(14,14,14,.6);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.15);color:#fff;border-radius:30px;padding:5px 14px;font-size:12.5px}
+.hcar .lbl b{color:var(--lime);font-weight:600}
+.hdots{display:flex;gap:5px}.hdots button{width:8px;height:8px;border-radius:8px;background:rgba(255,255,255,.4);transition:.2s}.hdots button.on{width:24px;background:var(--lime)}
+.htxt{position:relative;z-index:2;padding:40px 44px 0;max-width:480px}
+.htag{font-size:12.5px;color:var(--lime);font-weight:500}
+.htxt h1{font-size:50px;line-height:1.2;margin:10px 0 22px;font-weight:600}
+.htxt h1 .lt{font-weight:200}
+.vsel{position:relative;z-index:2;margin:auto 20px 20px;background:rgba(30,30,30,.82);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.08);border-radius:22px;padding:16px 18px}
+.vsel h4{font-size:14px;font-weight:300;margin-bottom:8px}.vsel h4 b{font-weight:600}
+.vrow{display:grid;grid-template-columns:repeat(4,1fr) auto;gap:10px;align-items:end}
+.vrow label{display:block;font-size:12px;color:#aaa;margin-bottom:4px}
+.dsel{width:100%;height:44px;border-radius:12px;background:#2a2a2a;border:1px solid #3a3a3a;color:#fff;padding:0 12px;font-size:13.5px;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23aaa' stroke-width='3'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:left 12px center}
+.dsel:focus{outline:none;border-color:var(--lime)}
+.vrow .circ{width:44px;height:44px}
+.hside{display:grid;grid-template-rows:1fr auto;gap:16px}
+.promo{background:#2b2b2b url(img/parts.webp) center bottom/cover no-repeat;color:#fff;border-radius:28px;padding:26px;position:relative;overflow:hidden;min-height:330px}
+.promo::before{content:"";position:absolute;inset:0;background:linear-gradient(to bottom,rgba(14,14,14,.92) 0%,rgba(14,14,14,.55) 45%,rgba(14,14,14,0) 75%)}
+.promo .art{position:absolute;left:-50px;bottom:-70px;width:250px;height:250px}
+.promo>*:not(.art){position:relative;z-index:2}
+.promo small{color:var(--lime);font-size:12.5px}
+.promo h3{font-size:24px;line-height:1.35;margin:6px 0 16px;font-weight:300}.promo h3 b{font-weight:600}
+.oem{background:#fff;border-radius:28px;padding:20px 22px}
+.oem .circ{width:40px;height:40px;margin-bottom:10px}
+.oem h4{font-size:15px;font-weight:300}.oem h4 b{font-weight:600}
+.oem p{font-size:12.5px;color:var(--muted);margin-top:2px}
+
+section{padding:70px 0}
+.stitle{text-align:center;margin-bottom:30px}
+.stitle h2{font-size:32px;font-weight:600}.stitle h2 .lt{font-weight:200}
+.stitle p{color:var(--muted);font-size:14px;max-width:440px;margin:6px auto 0}
+.shead{display:flex;justify-content:space-between;align-items:end;gap:16px;margin-bottom:24px;flex-wrap:wrap}
+.shead h2{font-size:30px}.shead h2 .lt{font-weight:200}
+.shead p{color:var(--muted);font-size:14px}
+
+/* bento categories */
+.bento{display:grid;grid-template-columns:1.3fr 1fr .8fr 1.1fr;grid-template-rows:170px 170px;gap:14px}
+.bc{background:#fff;border-radius:var(--R);padding:18px;position:relative;overflow:hidden;display:flex;flex-direction:column;text-align:right;transition:.2s;border:1px solid transparent}
+.bc:hover{border-color:#111}
+.bc.on{border-color:#111;box-shadow:0 0 0 2px var(--lime) inset}
+.bc .ic{width:40px;height:40px;border-radius:50%;background:var(--bg);display:grid;place-items:center}
+.bc b{font-size:15.5px;font-weight:600}
+.bc span{font-size:12.5px;color:var(--muted)}
+.bc .go{position:absolute;bottom:14px;left:14px;width:34px;height:34px}
+.bc .art{position:absolute;pointer-events:none}
+.bc.big{grid-row:span 2;justify-content:flex-end}
+.bc.big .ic{position:absolute;top:18px;right:18px}
+.bc.big .art{top:30px;left:20px;width:220px;height:220px}
+.bc.dark{background:var(--blk);color:#fff;grid-row:span 2}
+.bc.dark span{color:#999}
+.bc.dark .art{bottom:-20px;left:-20px;width:260px;height:260px}
+.bc .ic{align-self:flex-start}
+.bc.sm{justify-content:space-between}
+.bc.sm .art{left:10px;top:8px;width:80px;height:80px}
+.bc.lime{background:var(--lime);align-items:center;justify-content:center;text-align:center;gap:8px}
+.bc.lime .circ{width:40px;height:40px}
+.bc.wide{grid-column:span 1}
+
+/* high demand */
+.dark-band{background:var(--blk);color:#fff;border-radius:36px;padding:56px 0;margin:0 12px;position:relative;overflow:hidden}
+.dark-band .bgart{position:absolute;left:-80px;top:-40px;width:520px;height:520px;opacity:.5;pointer-events:none}
+.dark-band .shead p{color:#999}
+.ctrl{display:flex;gap:8px}
+.rail{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding-bottom:4px;position:relative}
+.rail::-webkit-scrollbar{display:none}
+.rail .pcard{flex:0 0 230px;scroll-snap-align:start}
+
+/* product cards */
+.pcard{background:#fff;color:var(--ink);border-radius:20px;padding:10px;display:flex;flex-direction:column;border:1px solid var(--line);transition:.15s}
+.pcard:hover{border-color:#111}
+.pimg{height:170px;border-radius:14px;background:radial-gradient(circle at 50% 50%,#fff 0,#f1f1ef 70%);display:grid;place-items:center;position:relative;overflow:hidden}
+.pimg svg.part{width:130px;height:130px}
+.ptag{position:absolute;top:8px;right:8px;font-size:11px;font-weight:600;padding:2px 9px;border-radius:20px;background:var(--blk);color:#fff}
+.ptag.sale{background:var(--red)}.ptag.oem{background:var(--lime);color:#111}
+.fav{position:absolute;top:6px;left:6px;width:32px;height:32px;border-radius:50%;background:#fff;display:grid;place-items:center;color:#aaa;border:1px solid var(--line)}
+.fav.on{color:var(--red)}
+.pbody{padding:10px 6px 4px;display:flex;flex-direction:column;flex:1}
+.pbody h3{font-size:14.5px;font-weight:500;line-height:1.5}
+.pn{font-size:11.5px;color:var(--muted)}.pn b{color:#333;font-weight:500;white-space:nowrap}
+.pmk{font-size:11.5px;color:var(--muted)}
+.rate{font-size:12px;color:#f0a000;margin-top:4px}.rate span{color:var(--muted)}
+.fits{font-size:12px;color:var(--muted);margin-top:4px;display:-webkit-box;-webkit-line-clamp:1;-webkit-box-orient:vertical;overflow:hidden}
+.stock{font-size:12px;font-weight:500;margin-top:4px}
+.stock.in{color:var(--green)}.stock.lo{color:#c77d00}.stock.out{color:#999}
+.pfoot{display:flex;align-items:center;justify-content:space-between;margin-top:auto;padding-top:10px;gap:8px}
+.price b{font-size:18px;font-weight:600}.price small{font-size:11.5px;color:var(--muted)}
+.price s{display:block;font-size:11.5px;color:#aaa;line-height:1}
+.add{display:inline-flex;align-items:center;gap:6px;background:var(--blk);color:#fff;border-radius:30px;padding:7px 14px;font-size:12.5px;font-weight:500;white-space:nowrap}
+.add:hover{background:var(--lime);color:#111}
+.add.ghost{background:var(--bg);color:#111}
+
+/* shop */
+.shop{display:grid;grid-template-columns:240px 1fr;gap:22px;align-items:start}
+.filters{background:#fff;border-radius:var(--R);padding:20px;position:sticky;top:130px}
+.filters h4{font-size:13.5px;margin:16px 0 6px;font-weight:600}
+.chk{display:flex;align-items:center;gap:8px;padding:3px 0;font-size:13.5px;cursor:pointer}
+.chk input{width:16px;height:16px;accent-color:#111}
+.chk .c{margin-inline-start:auto;font-size:12px;color:var(--muted)}
+input[type=range]{width:100%;accent-color:#111}
+.inp{width:100%;height:44px;border:1px solid var(--line);border-radius:12px;padding:0 14px;background:#fff;font-size:14px}
+.inp:focus{outline:none;border-color:#111}
+select.inp{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23777' stroke-width='3'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:left 14px center;padding-left:34px}
+textarea.inp{height:auto;padding:10px 14px;resize:vertical}
+label.f{display:block;font-size:12.5px;font-weight:500;color:var(--muted);margin-bottom:4px}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+.chips button{padding:6px 14px;border-radius:30px;background:#fff;border:1px solid var(--line);font-size:13px}
+.chips button.on{background:var(--blk);color:#fff;border-color:var(--blk)}
+.toolbar{display:flex;gap:10px;margin-bottom:12px;flex-wrap:wrap;align-items:center}
+.toolbar .count{color:var(--muted);font-size:13.5px;margin-inline-end:auto}
+.toolbar select{width:auto}
+.vehchip{display:none;align-items:center;gap:8px;background:var(--lime);border-radius:30px;padding:4px 6px 4px 14px;font-size:13px;font-weight:600;margin-bottom:12px}
+.vehchip.on{display:inline-flex}
+.vehchip button{width:22px;height:22px;border-radius:50%;background:#111;color:#fff;display:grid;place-items:center;font-size:11px}
+.grid-p{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.empty{grid-column:1/-1;background:#fff;border-radius:var(--R);padding:40px;text-align:center;color:var(--muted)}
+.empty b{display:block;color:#111;font-size:17px;margin-bottom:6px}
+.ffilter{display:none}
+
+/* shop by car */
+.cars{display:grid;grid-template-columns:1.4fr 1fr 1fr;grid-template-rows:230px 230px;gap:14px}
+.carc{position:relative;border-radius:24px;overflow:hidden;background:#222 center/cover no-repeat;color:#fff;text-align:right;display:flex;flex-direction:column;justify-content:flex-end;padding:20px;transition:.25s}
+.carc::before{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(10,10,10,.88) 0%,rgba(10,10,10,.25) 50%,rgba(10,10,10,0) 70%);transition:.25s}
+.carc:hover::before{background:linear-gradient(to top,rgba(10,10,10,.92) 0%,rgba(10,10,10,.35) 60%,rgba(10,10,10,.05) 100%)}
+.carc>*{position:relative}
+.carc .mk{font-size:12px;color:var(--lime);font-weight:500;letter-spacing:.5px}
+.carc b{font-size:22px;font-weight:600;line-height:1.3}
+.carc span.d{font-size:13px;color:#ccc}
+.carc .circ{position:absolute;top:16px;left:16px;width:38px;height:38px}
+.carc.big{grid-row:span 2}.carc.big b{font-size:30px}
+.carc.txt{background:var(--blk);justify-content:space-between}
+.carc.txt::before{display:none}
+.carc .mods{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.carc .mods span{font-size:11.5px;border:1px solid rgba(255,255,255,.25);border-radius:20px;padding:2px 10px;color:#ddd}
+/* deals */
+.deals{display:grid;grid-template-columns:.9fr 1fr 1fr;gap:16px;align-items:center;position:relative}
+.deals h2{font-size:36px;line-height:1.25}.deals h2 .lt{font-weight:200}
+.cd{display:flex;gap:8px;margin:18px 0}
+.cd div{width:58px;height:58px;border-radius:50%;background:var(--lime);color:#111;display:grid;place-content:center;text-align:center;line-height:1.1}
+.cd b{font-size:18px;font-weight:700}.cd span{font-size:10px}
+.dcard{background:#fff;color:#111;border-radius:22px;padding:22px;position:relative;overflow:hidden;min-height:220px}
+.dcard .sale{display:inline-block;background:var(--red);color:#fff;font-size:11.5px;font-weight:600;padding:2px 10px;border-radius:20px}
+.dcard h3{font-size:20px;font-weight:300;line-height:1.4;margin:8px 0 14px;max-width:200px}.dcard h3 b{font-weight:600}
+.dcard .art{position:absolute;left:-20px;bottom:-20px;width:200px;height:200px}
+
+/* brands */
+.brands{display:grid;grid-template-columns:repeat(6,1fr);gap:12px}
+.brand{background:#fff;border-radius:16px;height:80px;display:grid;place-items:center;border:1px solid transparent;transition:.15s;font-family:system-ui,sans-serif;font-weight:800;letter-spacing:2px;color:#b2b2b2;font-size:15px}
+.brand:hover{border-color:#111;color:#111}
+.brand.car{color:#333}
+.brand small{display:block;font-family:"Readex Pro";font-weight:400;letter-spacing:0;font-size:11px;color:var(--muted);text-align:center}
+
+/* banner */
+.banner{background:var(--blk);color:#fff;border-radius:28px;position:relative;overflow:hidden;display:grid;grid-template-columns:1fr 1fr;align-items:center;min-height:200px}
+.banner .art{height:100%;min-height:240px;background:url(img/parts.webp) center/cover;position:relative}
+.banner .art::after{content:"";position:absolute;inset:0;background:linear-gradient(to left,#0E0E0E 0%,rgba(14,14,14,0) 35%)}
+.banner .art svg{width:100%;height:100%;display:block}
+.banner .txt{padding:30px 40px;text-align:center}
+.banner h3{font-size:28px;font-weight:200;line-height:1.35}.banner h3 b{font-weight:600}
+.code{display:inline-block;border:1.5px dashed var(--lime);color:var(--lime);padding:3px 14px;border-radius:30px;font-weight:600;letter-spacing:1px;margin:12px 6px 0}
+
+/* services */
+.svc{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.svcbox{background:#fff;border-radius:var(--R);padding:26px}
+.svcbox.d{background:var(--blk);color:#fff}
+.svcbox.d .inp{background:#1d1d1d;border-color:#333;color:#fff}
+.svcbox.d label.f{color:#999}
+.svcbox h3{font-size:20px;font-weight:300;margin-bottom:4px}.svcbox h3 b{font-weight:600}
+.svcbox>p{color:var(--muted);font-size:14px;margin-bottom:14px}
+.sgrid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px}
+.sgrid .full{grid-column:1/-1}
+.ok{display:none;background:#eaf8ee;color:#106b3c;border-radius:12px;padding:10px 14px;font-size:13.5px;margin-top:10px}.ok.on{display:block}
+
+/* blog */
+.blogw{display:grid;grid-template-columns:.8fr 1.6fr;gap:30px;align-items:start}
+.blogw h2{font-size:30px;line-height:1.35}.blogw h2 .lt{font-weight:200}
+.blogw>div>p{color:var(--muted);font-size:14px;margin:10px 0 18px}
+.posts{display:grid;gap:12px}
+.post{display:grid;grid-template-columns:150px 1fr;gap:16px;background:#fff;border-radius:20px;padding:10px;align-items:center}
+.post .th{border-radius:14px;overflow:hidden;aspect-ratio:1.4;background:#1a1a1a}
+.post .th svg{width:100%;height:100%;display:block}
+.post .th img{width:100%;height:100%;object-fit:cover;display:block}
+.post small{color:var(--muted);font-size:12px}
+.post h3{font-size:15.5px;font-weight:600;margin:2px 0}
+.post p{font-size:13px;color:var(--muted)}
+
+/* faq */
+.faq{max-width:860px;margin:0 auto}
+details{background:#fff;border-radius:16px;margin-bottom:8px}
+summary{padding:16px 20px;font-weight:500;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:10px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";width:28px;height:28px;border-radius:50%;background:var(--bg);display:grid;place-items:center;flex:none}
+details[open] summary::after{content:"–";background:var(--lime)}
+details p{padding:0 20px 16px;color:#555;font-size:14px}
+
+/* footer */
+footer{background:var(--blk);color:#9a9a9a;margin-top:40px;border-radius:36px 36px 0 0;padding:50px 0 0}
+.fcols{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr 1.3fr;gap:24px}
+footer h5{color:#fff;font-size:14.5px;font-weight:600;margin-bottom:12px}
+footer li{list-style:none;margin-bottom:8px;font-size:13.5px}
+footer a:hover,footer button:hover{color:var(--lime)}
+footer button{color:#9a9a9a;font-size:13.5px}
+.news{display:flex;background:#1d1d1d;border-radius:40px;padding:4px;margin-top:10px}
+.news input{flex:1;background:none;border:0;color:#fff;padding:0 14px;font-size:13px;min-width:0}
+.news input:focus{outline:none}
+.flegal{border-top:1px solid #262626;margin-top:40px;padding:18px 0;font-size:12.5px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+
+/* drawer/modal */
+.ov{position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:60;opacity:0;pointer-events:none;transition:.2s}.ov.on{opacity:1;pointer-events:auto}
+.drawer{position:fixed;top:0;bottom:0;left:0;width:min(420px,100%);background:#fff;z-index:61;transform:translateX(-105%);transition:.25s;display:flex;flex-direction:column}
+.drawer.on{transform:none}
+.dh{display:flex;justify-content:space-between;align-items:center;padding:18px 20px;border-bottom:1px solid var(--line)}
+.dh b{font-size:18px;font-weight:600}
+.db{flex:1;overflow:auto;padding:10px 20px}
+.df{padding:18px 20px;background:var(--bg)}
+.ci{display:flex;gap:12px;padding:12px 0;border-bottom:1px solid var(--line);align-items:center}
+.ci .th{width:60px;height:60px;border-radius:14px;background:var(--bg);display:grid;place-items:center;flex:none}
+.ci .th svg{width:50px;height:50px}
+.ci .info{flex:1;min-width:0}.ci .info b{display:block;font-size:13.5px;font-weight:500}.ci .info small{color:var(--muted);font-size:12px}
+.qty{display:inline-flex;align-items:center;background:var(--bg);border-radius:20px;margin-top:4px}
+.qty button{width:28px;height:28px;font-weight:700}.qty span{min-width:20px;text-align:center;font-size:13.5px}
+.rm{color:#999;font-size:12px;margin-inline-start:8px}
+.row2{display:flex;justify-content:space-between;font-size:14px;margin-bottom:6px}.row2.t{font-size:17px;font-weight:600}
+.modal{position:fixed;top:50%;left:50%;transform:translate(-50%,-46%);width:min(500px,94%);max-height:90vh;overflow:auto;background:#fff;border-radius:24px;z-index:62;opacity:0;pointer-events:none;transition:.2s;padding:26px}
+.modal.on{opacity:1;pointer-events:auto;transform:translate(-50%,-50%)}
+.x{position:absolute;top:14px;left:14px;width:34px;height:34px;border-radius:50%;background:var(--bg);display:grid;place-items:center}
+.step{display:flex;gap:12px;padding-bottom:16px;position:relative}
+.step .d{width:22px;height:22px;border-radius:50%;background:var(--line);flex:none;display:grid;place-items:center;font-size:11px}
+.step.done .d{background:#111;color:var(--lime)}.step.cur .d{background:var(--lime)}
+.step:not(:last-child)::after{content:"";position:absolute;right:10px;top:24px;bottom:2px;width:2px;background:var(--line)}
+.step span{display:block;font-size:12.5px;color:var(--muted)}
+.toast{position:fixed;bottom:22px;left:50%;transform:translate(-50%,20px);background:#111;color:#fff;padding:10px 18px;border-radius:30px;font-size:14px;z-index:80;opacity:0;transition:.2s;pointer-events:none}
+.toast.on{opacity:1;transform:translate(-50%,0)}
+.fab{position:fixed;bottom:20px;right:20px;width:56px;height:56px;border-radius:50%;background:#1fa855;display:grid;place-items:center;box-shadow:0 8px 20px rgba(31,168,85,.4);z-index:50}
+.defs{position:absolute;width:0;height:0;overflow:hidden}
+
+@media (max-width:1240px){.h2info .x1{display:none}}
+@media (max-width:1140px){.navlinks .x1,.h2info{display:none}.mcols{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:1080px){
+  .navlinks .x2{display:none}.mega{grid-template-columns:1fr}.mpromo{display:none}
+  .hgrid{grid-template-columns:1fr}.hside{grid-template-columns:1fr 1fr;grid-template-rows:auto}
+  .bento{grid-template-columns:1fr 1fr;grid-template-rows:auto}.bc{min-height:150px}.bc.big,.bc.dark{grid-row:span 1;min-height:240px}
+  .grid-p{grid-template-columns:repeat(2,1fr)}
+  .deals{grid-template-columns:1fr 1fr}.deals>div:first-child{grid-column:1/-1}
+  .cars{grid-template-columns:1fr 1fr;grid-template-rows:260px 200px 200px}.carc.big{grid-column:1/-1;grid-row:auto}
+  .brands{grid-template-columns:repeat(3,1fr)}
+  .blogw{grid-template-columns:1fr}
+  .fcols{grid-template-columns:1fr 1fr}
+  .vrow{grid-template-columns:1fr 1fr}.vrow .circ{width:100%;border-radius:12px;grid-column:1/-1}
+}
+@media (max-width:820px){
+  .hsearch{display:none}.user{display:none}.h2row{display:none}.burger{display:grid}.hicons .ibtn:first-child{display:none}
+  .h1row{gap:10px}.hicons{margin-inline-start:auto}
+  .shop{grid-template-columns:1fr}
+  .filters{position:fixed;inset:auto 0 0 0;top:auto;max-height:80vh;overflow:auto;z-index:61;border-radius:24px 24px 0 0;transform:translateY(105%);transition:.25s}
+  .filters.on{transform:none}.ffilter{display:inline-flex}
+  .svc,.banner{grid-template-columns:1fr}
+  .htxt h1{font-size:34px}.htxt{padding:68px 24px 0}
+  .hmain{min-height:560px}
+  .dark-band{margin:0;border-radius:28px}
+}
+@media (max-width:560px){
+  .hside{grid-template-columns:1fr}
+  .grid-p{grid-template-columns:1fr 1fr;gap:10px}
+  .pimg{height:120px}.pimg svg.part{width:96px;height:96px}
+  .pfoot{flex-direction:column;align-items:stretch}.add{justify-content:center}
+  .fits{display:none}
+  .bento{grid-template-columns:1fr 1fr}.bc.big .art{width:120px;height:120px;top:auto;bottom:60px;left:10px}.bc.dark .art{width:130px;height:130px;bottom:-14px;left:-14px}.bc.big,.bc.dark{min-height:260px}.bc.dark>div{margin-top:46px}.bc.sm .art{width:60px;height:60px}
+  .deals{grid-template-columns:1fr}
+  .cars{grid-template-columns:1fr;grid-template-rows:auto}.carc{min-height:200px}.carc.big{min-height:260px}
+  .hshade{background:linear-gradient(to top,rgba(14,14,14,.97) 0%,rgba(14,14,14,.85) 45%,rgba(14,14,14,.35) 75%,rgba(14,14,14,.2) 100%)}
+  .brands{grid-template-columns:repeat(2,1fr)}
+  .sgrid{grid-template-columns:1fr}
+  .post{grid-template-columns:100px 1fr}
+  .fcols{grid-template-columns:1fr}
+  .stitle h2,.shead h2{font-size:26px}
+}
+</style>
+</head>
+<body>
+<a href="#shop" class="skip">تخطَّ إلى المتجر</a>
+<div class="demo-note">نموذج تصميم ثانٍ — موقع تجريبي، الأسعار والبيانات للعرض فقط</div>
+
+<!-- shared gradients for all part illustrations -->
+<svg class="defs" aria-hidden="true"><defs>
+  <linearGradient id="metal" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#e8e8e8"/><stop offset=".5" stop-color="#8c8c8c"/><stop offset="1" stop-color="#d6d6d6"/></linearGradient>
+  <radialGradient id="metal2"><stop offset="0" stop-color="#f4f4f4"/><stop offset="1" stop-color="#7a7a7a"/></radialGradient>
+  <linearGradient id="metalV" x1="0" x2="1"><stop offset="0" stop-color="#5f5f5f"/><stop offset=".35" stop-color="#dcdcdc"/><stop offset=".7" stop-color="#8a8a8a"/><stop offset="1" stop-color="#4a4a4a"/></linearGradient>
+  <linearGradient id="caliper" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ff5a4a"/><stop offset="1" stop-color="#b3150f"/></linearGradient>
+  <linearGradient id="orangeC" x1="0" x2="1"><stop offset="0" stop-color="#c25a00"/><stop offset=".4" stop-color="#ff9a2a"/><stop offset="1" stop-color="#b04c00"/></linearGradient>
+  <linearGradient id="carBody" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6a6a6a"/><stop offset=".45" stop-color="#262626"/><stop offset="1" stop-color="#0a0a0a"/></linearGradient>
+  <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#5a6470"/><stop offset="1" stop-color="#14181c"/></linearGradient>
+  <radialGradient id="glow"><stop offset="0" stop-color="#E2F23A" stop-opacity=".35"/><stop offset="1" stop-color="#E2F23A" stop-opacity="0"/></radialGradient>
+  <linearGradient id="fade" x1="0" x2="1"><stop offset=".5" stop-color="#0E0E0E" stop-opacity="0"/><stop offset="1" stop-color="#0E0E0E" stop-opacity=".95"/></linearGradient>
+  <filter id="sh" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="8" stdDeviation="7" flood-opacity=".3"/></filter>
+</defs></svg>
+
+<header class="main"><div class="wrap">
+  <div class="h1row">
+    <a href="#top" class="logo"><img src="img/seoul-mark.svg" alt="" width="40" height="40" style="display:block"><span class="lwm"><b>سيول</b><small>لقطع الغيار الكورية</small></span></a>
+    <div class="hsearch"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input id="hq" placeholder="ابحث برقم القطعة أو اسمها…" aria-label="بحث" onkeydown="if(event.key==='Enter')heroSearch()"></div>
+    <div class="hicons">
+      <button class="ibtn" aria-label="تتبع الطلب" onclick="openModal('trackM')"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 4h14v12H1zM15 9h4l4 4v3h-8z"/><circle cx="6" cy="18.5" r="2"/><circle cx="18" cy="18.5" r="2"/></svg></button>
+      <button class="ibtn" aria-label="المفضلة" onclick="showFavs()"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8z"/></svg><span class="badge" id="favCount" hidden>0</span></button>
+      <button class="ibtn" aria-label="السلة" onclick="openCart()"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1.4"/><circle cx="19" cy="21" r="1.4"/><path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"/></svg><span class="badge" id="cartCount" hidden>0</span></button>
+      <a href="#" class="user" onclick="return wa('السلام عليكم، أحتاج مساعدة في اختيار قطعة')"><span class="av"><svg width="18" height="18" viewBox="0 0 24 24" fill="#fff"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2z"/></svg></span><div><small>مساعدة فنية</small><b class="num">0500000000</b></div></a>
+      <button class="ibtn burger" aria-label="القائمة" onclick="openMM()"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
+    </div>
+  </div>
+  <nav class="h2row" aria-label="القائمة الرئيسية">
+    <button class="catbtn" id="catBtn" aria-expanded="false" aria-controls="mega" onclick="toggleMega()"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>تسوّق حسب القسم<svg class="chev" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m6 9 6 6 6-6"/></svg></button>
+    <div class="navlinks" id="navlinks">
+      <a href="#top" data-s="top">الرئيسية</a><a href="#bycar" data-s="bycar">حسب سيارتك</a><a href="#shop" data-s="shop">كل القطع</a><a href="#offers" data-s="offers">العروض<span class="hot">جديد</span></a><a href="#brands" data-s="brands" class="x2">الماركات</a><a href="#vin" data-s="vin">الطلب بالشاصي</a><a href="#blog" data-s="blog" class="x1">المدونة</a>
+    </div>
+    <div class="h2info"><span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 4h14v12H1zM15 9h4l4 4v3h-8z"/><circle cx="6" cy="18.5" r="2"/><circle cx="18" cy="18.5" r="2"/></svg>توصيل مجاني فوق <b>٣٠٠ ر.س</b></span><span class="x1"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg><b class="num">920000000</b></span></div>
+    <div class="mega" id="mega" role="region" aria-label="أقسام القطع">
+      <div class="mcols" id="mcols"></div>
+      <div class="mpromo"><small>عرض الأسبوع</small><h4><span>باقة</span> <b>الصيانة الدورية</b><br>خصم <b>٢٠٪</b></h4><button class="btn btn-lime" style="align-self:flex-start;margin-top:auto" onclick="closeMega();go('offers')">شوف العرض</button></div>
+      <div class="mfoot"><span>تسوّق حسب الماركة:</span><span id="mbrands" style="display:flex;gap:6px;flex-wrap:wrap"></span><span style="margin-inline-start:auto">ما لقيت القطعة؟ <a href="#vin" onclick="closeMega()" style="color:#111;text-decoration:underline">اطلبها برقم الشاصي</a></span></div>
+    </div>
+  </nav>
+</div></header>
+
+<main id="top">
+<!-- HERO -->
+<section class="hero"><div class="wrap"><div class="hgrid">
+  <div class="hmain">
+    <div class="art" id="heroSlides" aria-hidden="true"></div><div class="hshade"></div>
+    <div class="hcar"><span class="lbl" id="hLbl"></span><div class="hdots" id="hDots"></div></div>
+    <div class="htxt">
+      <span class="htag">خصم ١٥٪ على أول طلب — كود NEW15</span>
+      <h1><span class="lt">قطع غيار</span> أصلية<br><span class="lt">لسيارتك</span> الكورية<br><span class="lt">—</span> بثقة.</h1>
+      <a href="#shop" class="btn btn-lime">تسوّق الآن</a>
+    </div>
+    <div class="vsel">
+      <h4><span class="lt">اختر</span> <b>سيارتك</b></h4>
+      <div class="vrow">
+        <div><label for="hMake">الماركة</label><select class="dsel" id="hMake" onchange="fillModels('hMake','hModel')"></select></div>
+        <div><label for="hModel">الموديل</label><select class="dsel" id="hModel"></select></div>
+        <div><label for="hYear">السنة</label><select class="dsel" id="hYear"></select></div>
+        <div><label for="hCat">القسم</label><select class="dsel" id="hCat"></select></div>
+        <button class="circ lime" aria-label="اعرض القطع" onclick="applyVehicle()"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></button>
+      </div>
+    </div>
+  </div>
+  <div class="hside">
+    <div class="promo">
+      <small>عرض خاص</small>
+      <h3><span>أطقم</span> <b>كلتش ودبرياج</b><br>خصم يصل <b>٢٥٪</b></h3>
+      <button class="btn btn-ghost" onclick="setCat('trans')">تسوّق الآن</button>
+      
+    </div>
+    <div class="oem">
+      <span class="circ g"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 3 6v6c0 5 3.8 9.4 9 10 5.2-.6 9-5 9-10V6z"/><path d="m8.5 12 2.5 2.5 4.5-5"/></svg></span>
+      <h4><span>ضمان</span> <b>جودة الوكالة</b></h4>
+      <p>كل قطعة نبيعها <b style="color:#111">تطابق أو تتجاوز</b> مواصفات الشركة المصنّعة، ومربوطة برقمها الأصلي.</p>
+    </div>
+  </div>
+</div></div></section>
+
+<!-- CATEGORIES -->
+<section id="cats" style="padding-top:50px"><div class="wrap">
+  <div class="stitle"><h2><span class="lt">تسوّق حسب</span> القسم</h2><p>لاقِ قطعة سيارتك بسرعة من خلال أقسام مرتبة وسهلة التصفّح</p></div>
+  <div class="bento" id="bento"></div>
+</div></section>
+
+<!-- SHOP BY CAR -->
+<section id="bycar" style="padding-top:10px"><div class="wrap">
+  <div class="shead"><div><h2><span class="lt">تسوّق حسب</span> سيارتك</h2><p>اختر سيارتك ونعرض لك القطع المتوافقة معها فقط</p></div><a href="#top" class="btn btn-line" onclick="setTimeout(()=>hMake.focus(),400)">اختر الموديل والسنة</a></div>
+  <div class="cars">
+    <button class="carc big" style="background-image:url(img/elantra-n.webp)" onclick="pickCar('hyundai','النترا')"><span class="circ lime">↖</span><span class="mk">HYUNDAI</span><b>هيونداي النترا</b><span class="d">فلاتر، فحمات، مساعدات، إضاءة وأكثر</span></button>
+    <button class="carc" style="background-image:url(img/tucson-sm.webp)" onclick="pickCar('hyundai','توسان')"><span class="circ w">↖</span><span class="mk">HYUNDAI</span><b>هيونداي توسان</b><span class="d" id="cnt-توسان"></span></button>
+    <button class="carc" style="background-image:url(img/sorento.webp)" onclick="pickCar('kia','سورينتو')"><span class="circ w">↖</span><span class="mk">KIA</span><b>كيا سورينتو</b><span class="d" id="cnt-سورينتو"></span></button>
+    <button class="carc" style="background-image:url(img/genesis-g80-sm.webp)" onclick="pickCar('genesis','G80')"><span class="circ w">↖</span><span class="mk">GENESIS</span><b>جينيسيس G80</b><span class="d" id="cnt-G80"></span></button>
+    <div class="carc txt"><div><span class="mk">كل الموديلات</span><b style="display:block">ما لقيت سيارتك؟</b><div class="mods" id="allMods"></div></div><a href="#vin" class="btn btn-lime" style="align-self:flex-start;margin-top:12px">اطلب برقم الشاصي</a></div>
+  </div>
+</div></section>
+
+<!-- HIGH DEMAND -->
+<div class="dark-band"><svg class="bgart" id="bandArt" viewBox="0 0 500 500" aria-hidden="true"></svg><div class="wrap" style="position:relative">
+  <div class="shead"><div><h2><span class="lt">القطع</span> الأكثر طلباً</h2><p>اللي يطلبها أصحاب هيونداي وكيا كل يوم</p></div>
+    <div class="ctrl"><button class="circ o" aria-label="السابق" onclick="railGo(1)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m9 6 6 6-6 6"/></svg></button><button class="circ lime" aria-label="التالي" onclick="railGo(-1)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m15 6-6 6 6 6"/></svg></button></div></div>
+  <div class="rail" id="rail"></div>
+</div></div>
+
+<!-- SHOP -->
+<section id="shop"><div class="wrap">
+  <div class="shead"><div><h2><span class="lt">كل</span> القطع</h2><p>أسعار شاملة ضريبة القيمة المضافة ١٥٪</p></div><button class="btn btn-line ffilter" onclick="toggleFilters(true)">⚙ الفلاتر</button></div>
+  <div class="shop">
+    <aside class="filters" id="filters" aria-label="فلاتر">
+      <div style="display:flex;justify-content:space-between;align-items:center"><h4 style="margin:0">الفلاتر</h4><button style="font-size:12.5px;text-decoration:underline" onclick="resetFilters()">مسح الكل</button></div>
+      <h4>الماركة</h4><div id="fMake"></div>
+      <h4>الموديل</h4><select class="inp" id="fModel" onchange="render()"></select>
+      <h4>نوع القطعة</h4>
+      <label class="chk"><input type="checkbox" value="oem" class="fType" onchange="render()" checked> أصلي (وكالة)</label>
+      <label class="chk"><input type="checkbox" value="aft" class="fType" onchange="render()" checked> تجاري معتمد</label>
+      <h4>السعر الأقصى: <span id="pv" class="num">2000</span> ر.س</h4>
+      <input type="range" id="fPrice" min="20" max="2000" step="10" value="2000" oninput="pv.textContent=this.value;render()" aria-label="السعر الأقصى">
+      <h4>التوفر</h4><label class="chk"><input type="checkbox" id="fStock" onchange="render()"> المتوفر فقط</label>
+      <button class="btn btn-blk ffilter" style="width:100%;margin-top:16px" onclick="toggleFilters(false)">عرض النتائج</button>
+    </aside>
+    <div>
+      <div class="chips" id="chips"></div>
+      <div class="vehchip" id="vehChip"><span id="vehTxt"></span><button aria-label="إزالة" onclick="clearVehicle()">✕</button></div>
+      <div class="toolbar"><span class="count" id="count"></span>
+        <input class="inp" id="q" style="max-width:260px" placeholder="فلترة بالاسم أو الرقم…" oninput="render()" aria-label="فلترة">
+        <select class="inp" id="sort" onchange="render()" aria-label="ترتيب"><option value="pop">الأكثر طلباً</option><option value="lo">السعر: الأقل</option><option value="hi">السعر: الأعلى</option></select></div>
+      <div class="grid-p" id="grid"></div>
+      <div style="text-align:center;margin-top:20px"><button class="btn btn-blk" id="more" onclick="shown+=9;render(true)" hidden></button></div>
+    </div>
+  </div>
+</div></section>
+
+<!-- DEALS -->
+<div class="dark-band" id="offers"><div class="wrap"><div class="deals">
+  <div><h2><span class="lt">عروض</span> الأسبوع</h2><div class="cd" id="cd"></div><p style="color:#999;font-size:14px;max-width:280px">عروض تتجدد كل أسبوع على أكثر القطع طلباً. الكمية محدودة.</p></div>
+  <div class="dcard"><span class="sale">تخفيض</span><h3><span>طقم</span> <b>فحمات + هوبات</b><br>خصم <b>١٥٪</b></h3><button class="btn btn-blk" onclick="setCat('brakes')">تسوّق الآن</button><svg class="art" id="deal1" viewBox="0 0 200 200" aria-hidden="true"></svg></div>
+  <div class="dcard"><span class="sale">تخفيض</span><h3><span>باقة</span> <b>الصيانة الدورية</b><br>خصم <b>٢٠٪</b></h3><button class="btn btn-blk" onclick="setCat('filters')">تسوّق الآن</button><svg class="art" id="deal2" viewBox="0 0 200 200" aria-hidden="true"></svg></div>
+</div></div></div>
+
+<!-- BRANDS -->
+<section id="brands"><div class="wrap">
+  <div class="stitle"><h2><span class="lt">ماركاتنا</span> المميزة</h2><p>سيارات كورية فقط — وقطع من مصنّعين معتمدين</p></div>
+  <div class="brands" id="brandGrid"></div>
+</div></section>
+
+<!-- BANNER -->
+<div class="wrap"><div class="banner">
+  <div class="txt"><h3><span>عرض حصري أونلاين:</span><br><b>باقة الصيانة</b> خصم <b>٢٠٪</b></h3><span class="code">SERVICE20</span><button class="btn btn-lime" style="margin-top:12px" onclick="copyCode('SERVICE20')">انسخ الكود</button></div>
+  <div class="art" role="img" aria-label="مجموعة قطع غيار"></div>
+</div></div>
+
+<!-- SERVICES -->
+<section id="vin"><div class="wrap">
+  <div class="stitle"><h2><span class="lt">ما لقيت</span> القطعة؟</h2><p>أرسل لنا رقم الشاصي ونحدّد لك القطعة الصحيحة برقمها الأصلي</p></div>
+  <div class="svc">
+    <div class="svcbox d">
+      <h3><span>اطلب برقم</span> <b>الشاصي (VIN)</b></h3><p>نرد عليك بالرقم الأصلي والسعر والتوفر خلال ساعة عمل.</p>
+      <form onsubmit="return vinSubmit(event)"><div class="sgrid">
+        <div class="full"><label class="f" for="vVin">رقم الهيكل (١٧ خانة)</label><input class="inp num" style="text-align:right;text-transform:uppercase" id="vVin" maxlength="17" placeholder="KMHD841CBMU000000" required pattern="[A-Za-z0-9]{17}" title="١٧ حرف/رقم"></div>
+        <div class="full"><label class="f" for="vPart">القطع المطلوبة</label><textarea class="inp" id="vPart" rows="2" placeholder="مثال: صدام أمامي + شمعة يمين" required></textarea></div>
+        <div><label class="f" for="vName">الاسم</label><input class="inp" id="vName" required></div>
+        <div><label class="f" for="vPhone">رقم الجوال</label><input class="inp num" style="text-align:right" id="vPhone" placeholder="05xxxxxxxx" required pattern="05[0-9]{8}" title="05xxxxxxxx"></div>
+      </div><button class="btn btn-lime" style="width:100%">أرسل الطلب عبر واتساب</button><div class="ok" id="vinOk">تم تجهيز طلبك في واتساب — اضغط «إرسال» هناك لإكماله.</div></form>
+    </div>
+    <div class="svcbox">
+      <h3><span>طلبات</span> <b>الورش والأساطيل</b></h3><p>أسعار جملة، حساب آجل، وتوصيل يومي لمنشأتك.</p>
+      <form onsubmit="return b2bSubmit(event)"><div class="sgrid">
+        <div><label class="f" for="bCo">اسم المنشأة</label><input class="inp" id="bCo" required></div>
+        <div><label class="f" for="bCity">المدينة</label><select class="inp" id="bCity"><option>الرياض</option><option>جدة</option><option>الدمام</option><option>مدينة أخرى</option></select></div>
+        <div><label class="f" for="bType">النشاط</label><select class="inp" id="bType"><option>ورشة صيانة</option><option>شركة تأجير</option><option>أسطول شركة</option><option>محل قطع غيار</option></select></div>
+        <div><label class="f" for="bPhone">رقم الجوال</label><input class="inp num" style="text-align:right" id="bPhone" placeholder="05xxxxxxxx" required pattern="05[0-9]{8}" title="05xxxxxxxx"></div>
+      </div><button class="btn btn-blk" style="width:100%">اطلب عرض أسعار جملة</button><div class="ok" id="b2bOk">تم تجهيز طلبك في واتساب — اضغط «إرسال» هناك لإكماله.</div></form>
+    </div>
+  </div>
+</div></section>
+
+<!-- BLOG -->
+<section id="blog" style="padding-top:20px"><div class="wrap"><div class="blogw">
+  <div><h2><span class="lt">ابقَ على اطلاع</span><br>مع آخر المقالات</h2><p>نصائح صيانة، وأدلة شراء، وكل اللي تحتاج تعرفه قبل ما تطلب قطعتك.</p><a href="#blog" class="btn btn-blk">كل المقالات</a></div>
+  <div class="posts" id="posts"></div>
+</div></div></section>
+
+<!-- FAQ -->
+<section id="faq" style="padding-top:20px"><div class="wrap">
+  <div class="stitle"><h2><span class="lt">الأسئلة</span> الشائعة</h2></div>
+  <div class="faq">
+    <details><summary>كيف أتأكد إن القطعة تركب على سيارتي؟</summary><p>اختر سيارتك من «اختر سيارتك» لعرض المتوافق فقط، وللتأكد ١٠٠٪ أرسل رقم الشاصي ونطابقها لك بالرقم الأصلي قبل الشحن.</p></details>
+    <details><summary>وش الفرق بين الأصلي والتجاري المعتمد؟</summary><p>الأصلي من مصنع الوكالة (Hyundai/Kia Genuine – Mobis)، والتجاري المعتمد من مصنّعين بجودة مطابقة للمواصفات وبسعر أقل.</p></details>
+    <details><summary>كم مدة التوصيل؟</summary><p>داخل الرياض وجدة والدمام خلال ٢٤ ساعة، وباقي المدن ٢–٣ أيام عمل. التوصيل مجاني للطلبات فوق ٣٠٠ ريال.</p></details>
+    <details><summary>هل أقدر أرجّع القطعة؟</summary><p>نعم، خلال ١٤ يوم إذا كانت بحالتها وكرتونها الأصلي ولم تُركّب.</p></details>
+    <details><summary>وش طرق الدفع؟</summary><p>الدفع عند الاستلام، مدى، فيزا/ماستركارد، Apple Pay، والتقسيط عبر تابي وتمارا.</p></details>
+  </div>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+  <div class="fcols">
+    <div><a href="#top" class="logo" style="color:#fff;margin-bottom:12px"><img src="img/seoul-mark-dark.svg" alt="" width="40" height="40" style="display:block"><span class="lwm"><b>سيول</b><small style="color:#ff6b75">لقطع الغيار الكورية</small></span></a>
+      <p style="font-size:13.5px;margin-top:10px">متجر متخصص في قطع غيار هيونداي وكيا وجينيسيس وKGM — أصلي وتجاري معتمد، مع توصيل لكل مدن المملكة.</p></div>
+    <div><h5>المتجر</h5><ul><li><button onclick="setCat('engine')">المحرك</button></li><li><button onclick="setCat('brakes')">الفرامل</button></li><li><button onclick="setCat('filters')">فلاتر وزيوت</button></li><li><button onclick="setCat('suspension')">التعليق</button></li></ul></div>
+    <div><h5>خدمة العملاء</h5><ul><li><button onclick="openModal('trackM')">تتبع الطلب</button></li><li><button onclick="openCart()">السلة</button></li><li><button onclick="showFavs()">المفضلة</button></li><li><a href="#faq">الأسئلة الشائعة</a></li></ul></div>
+    <div><h5>الفروع</h5><ul><li>الرياض — <span class="num">0112345678</span></li><li>جدة — <span class="num">0122345678</span></li><li>الدمام — <span class="num">0132345678</span></li><li>واتساب — <span class="num">0500000000</span></li></ul></div>
+    <div><h5>النشرة البريدية</h5><p style="font-size:13px">عروض الأسبوع توصلك أول بأول.</p>
+      <form class="news" onsubmit="event.preventDefault();this.reset();toast('تم الاشتراك ✓ (تجريبي)')"><input type="email" required placeholder="بريدك الإلكتروني" aria-label="البريد الإلكتروني"><button class="btn btn-lime" style="padding:8px 16px">اشترك</button></form></div>
+  </div>
+  <div class="flegal"><span>© ٢٠٢٦ سيول لقطع الغيار الكورية. جميع الحقوق محفوظة.</span><span>س.ت: 0000000000 · الرقم الضريبي: 300000000000003 (قيم تجريبية)</span></div>
+</div></footer>
+
+<a href="#" class="fab" aria-label="واتساب" onclick="return wa('السلام عليكم، أبي أستفسر عن قطعة')"><svg width="28" height="28" viewBox="0 0 24 24" fill="#fff"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.1.1.6-.1 1.2z"/></svg></a>
+
+<div class="mback" id="mback" onclick="closeMega()"></div>
+<aside class="mmenu" id="mmenu" aria-label="القائمة">
+  <div class="mh"><a href="#top" class="logo" onclick="closeAll()"><img src="img/seoul-mark.svg" alt="" width="40" height="40" style="display:block"><span class="lwm"><b>سيول</b><small>لقطع الغيار الكورية</small></span></a><button class="ibtn" onclick="closeAll()" aria-label="إغلاق">✕</button></div>
+  <div class="mb">
+    <div class="msearch"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input id="mq" placeholder="ابحث برقم القطعة أو اسمها…" aria-label="بحث" onkeydown="if(event.key==='Enter'){hq.value=this.value;closeAll();heroSearch()}"></div>
+    <h6>الأقسام</h6><div class="mgrid" id="mgrid"></div>
+    <h6>الصفحات</h6>
+    <div class="mlinks" onclick="if(event.target.closest('a'))closeAll()"><a href="#bycar">تسوّق حسب سيارتك <span>←</span></a><a href="#offers">العروض <span>←</span></a><a href="#brands">الماركات <span>←</span></a><a href="#vin">الطلب برقم الشاصي <span>←</span></a><a href="#blog">المدونة <span>←</span></a><a href="#faq">الأسئلة الشائعة <span>←</span></a></div>
+  </div>
+  <div class="mf"><button class="btn btn-blk" style="flex:1" onclick="closeAll();openModal('trackM')">تتبّع طلبك</button><a href="#" class="btn btn-wa" style="flex:1" onclick="return wa('السلام عليكم، أحتاج مساعدة')">واتساب</a></div>
+</aside>
+<div class="ov" id="ov" onclick="closeAll()"></div>
+<aside class="drawer" id="cart" aria-label="سلة المشتريات"><div class="dh"><b>سلة المشتريات</b><button class="ibtn" onclick="closeAll()" aria-label="إغلاق">✕</button></div><div class="db" id="cartBody"></div><div class="df" id="cartFoot"></div></aside>
+<div class="modal" id="trackM" role="dialog" aria-label="تتبع الطلب"><button class="x" onclick="closeAll()" aria-label="إغلاق">✕</button>
+  <h3>تتبّع طلبك</h3><p style="color:var(--muted);font-size:14px">أدخل رقم الطلب (جرّب: SP-10482)</p>
+  <div style="display:flex;gap:8px;margin-top:14px"><input class="inp num" style="text-align:right" id="tNo" placeholder="SP-10482"><button class="btn btn-lime" onclick="track()">تتبّع</button></div><div id="tRes" style="margin-top:16px"></div></div>
+<div class="toast" id="toast"></div>
+
+<script>
+const WA='966500000000';
+const MAKES={hyundai:{ar:'هيونداي',en:'HYUNDAI',models:['النترا','سوناتا','أكسنت','توسان','سنتافي','كريتا','أزيرا']},kia:{ar:'كيا',en:'KIA',models:['سيراتو','K5','سبورتاج','سورينتو','بيجاس','كارنفال','بيكانتو']},genesis:{ar:'جينيسيس',en:'GENESIS',models:['G70','G80','GV70','GV80']},kgm:{ar:'KGM سانغ يونغ',en:'KGM',models:['توريس','ريكستون','موسو']}};
+const CATS={engine:{ar:'المحرك',d:'أداء المحرك وقوته'},brakes:{ar:'الفرامل',d:'توقف آمن وثابت'},filters:{ar:'فلاتر وزيوت',d:'محرك نظيف وعمر أطول'},suspension:{ar:'التعليق والتوجيه',d:'ثبات وراحة في القيادة'},electrical:{ar:'الكهرباء',d:'تشغيل وشحن موثوق'},body:{ar:'البودي والإضاءة',d:'رؤية أوضح وشكل أجمل'},ac:{ar:'التكييف والتبريد',d:'برودة في عز الصيف'},trans:{ar:'القير والكلتش',d:'نقل حركة سلس'}};
+const ICO={engine:'<path d="M4 9h3l2-2h5l2 2h2v3h2v4h-2v2H8l-2-2H4z"/><path d="M9 7V5h5v2"/>',filters:'<path d="M8 3h8v3l2 2v11a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V8l2-2z"/><path d="M6 11h12M6 15h12"/>',brakes:'<circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="2.5"/>',suspension:'<path d="M12 2v3M12 19v3M8 5h8M8 19h8"/><path d="m9 7 6 2-6 2 6 2-6 2 6 2"/>',electrical:'<path d="M13 2 4 14h7l-1 8 9-12h-7z"/>',body:'<path d="M3 13l2-5a2 2 0 0 1 2-1h10a2 2 0 0 1 2 1l2 5v4H3z"/><path d="M3 13h18"/>',ac:'<path d="M12 2v20M4 6l16 12M20 6 4 18"/>',trans:'<circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3"/>'};
+const RAW=[
+ [1,'فلتر زيت أصلي','26300-35505','hyundai',['النترا','سوناتا','أكسنت','توسان','كريتا'],'2011–2025','filters','oem',28,null,140,99,'الأكثر مبيعاً'],
+ [2,'فلتر زيت أصلي','26300-35505','kia',['سيراتو','K5','سبورتاج','بيجاس','بيكانتو'],'2011–2025','filters','oem',28,null,120,97,null],
+ [3,'فلتر هواء محرك','28113-F2000','hyundai',['النترا'],'2016–2020','filters','oem',65,79,40,80,'خصم'],
+ [4,'فلتر مكيف كربون','97133-F2000','hyundai',['النترا','توسان','كريتا'],'2016–2024','filters','aft',39,null,60,78,null],
+ [5,'زيت محرك 5W-30 فل سنثتك ٤ لتر','05100-00451','hyundai',['النترا','سوناتا','أكسنت','توسان','سنتافي','أزيرا'],'جميع السنوات','filters','oem',165,null,85,90,null],
+ [6,'فحمات فرامل أمامية','58101-F2A00','hyundai',['النترا'],'2016–2020','brakes','oem',245,null,22,88,'الأكثر مبيعاً'],
+ [7,'فحمات فرامل أمامية سيراميك','58101-D4A00','kia',['K5'],'2016–2020','brakes','aft',179,215,30,82,'خصم'],
+ [8,'هوب فرامل أمامي (زوج)','51712-D7000','hyundai',['توسان'],'2016–2021','brakes','oem',520,null,8,70,null],
+ [9,'هوب فرامل أمامي (زوج)','51712-D4000','kia',['سبورتاج','K5'],'2016–2021','brakes','aft',360,null,14,66,null],
+ [10,'مساعد أمامي يمين','54661-F2000','hyundai',['النترا'],'2016–2020','suspension','oem',690,null,5,60,'كمية محدودة'],
+ [11,'مقص أمامي سفلي يسار','54500-D3000','hyundai',['توسان'],'2016–2020','suspension','aft',310,null,12,55,null],
+ [12,'جلدة ميزان (طقم)','54813-2S000','kia',['سبورتاج','سيراتو'],'2011–2022','suspension','aft',85,null,40,52,null],
+ [13,'بواجي إيريديوم (٤ حبات)','18849-08080','hyundai',['النترا','أكسنت','توسان','كريتا'],'2014–2024','engine','oem',180,210,50,85,'خصم'],
+ [14,'سير مكينة','25212-2E020','kia',['سيراتو','سبورتاج'],'2017–2023','engine','oem',95,null,26,64,null],
+ [15,'طرمبة ماء','25100-2G500','hyundai',['سوناتا','توسان','سنتافي'],'2011–2019','engine','aft',340,null,9,48,null],
+ [16,'كويل إشعال','27300-2B010','kia',['بيجاس','بيكانتو','سيراتو'],'2012–2023','engine','oem',150,null,0,58,null],
+ [17,'بطارية ٧٠ أمبير','37110-3S000','hyundai',['سوناتا','توسان','سنتافي','أزيرا'],'2015–2024','electrical','aft',420,null,18,76,null],
+ [18,'دينمو شحن','37300-2G400','kia',['K5','سورينتو'],'2014–2020','electrical','oem',1250,null,3,40,'كمية محدودة'],
+ [19,'سلف تشغيل','36100-2E100','hyundai',['النترا','كريتا'],'2017–2023','electrical','aft',690,null,7,44,null],
+ [20,'شمعة أمامية يمين LED','92102-F2010','hyundai',['النترا'],'2019–2020','body','oem',1680,null,4,50,null],
+ [21,'صدام أمامي','86511-D9000','kia',['سبورتاج'],'2019–2021','body','aft',590,null,6,46,null],
+ [22,'مرآة جانبية يسار كهربائية','87610-G3010','hyundai',['النترا'],'2021–2024','body','oem',780,null,0,30,null],
+ [23,'كمبروسر مكيف','97701-F2000','hyundai',['النترا','كريتا'],'2016–2022','ac','aft',1450,1690,5,42,'خصم'],
+ [24,'راديتر ماء','25310-D4000','kia',['K5','سبورتاج'],'2016–2021','ac','oem',890,null,6,38,null],
+ [25,'مروحة راديتر','25380-D3000','hyundai',['توسان'],'2016–2020','ac','aft',520,null,10,36,null],
+ [26,'زيت قير أوتوماتيك SP-IV ١ لتر','04500-00400','kia',['سيراتو','K5','سبورتاج','سورينتو','كارنفال'],'جميع السنوات','trans','oem',48,null,200,74,null],
+ [27,'طقم كلتش كامل','41300-23510','hyundai',['أكسنت','النترا'],'2011–2018','trans','aft',620,830,6,45,'خصم'],
+ [28,'فحمات فرامل أمامية','58101-G9A00','genesis',['G70','G80'],'2017–2023','brakes','oem',610,null,7,47,null],
+ [29,'فلتر زيت','26300-3C30A','genesis',['G80','GV80','GV70'],'2017–2025','filters','oem',45,null,40,62,null],
+ [30,'مساعد خلفي (زوج)','55300-T1000','genesis',['GV80'],'2020–2025','suspension','aft',1290,null,3,28,'كمية محدودة'],
+ [31,'فلتر زيت','A1721843025','kgm',['توريس','ريكستون','موسو'],'2018–2025','filters','aft',35,null,30,30,null],
+ [32,'فحمات فرامل أمامية','48130-35100','kgm',['ريكستون','موسو'],'2018–2024','brakes','aft',230,null,10,26,null]
+];
+const P=RAW.map(r=>({id:r[0],name:r[1],pn:r[2],make:r[3],models:r[4],years:r[5],cat:r[6],type:r[7],price:r[8],old:r[9],stock:r[10],pop:r[11],tag:r[12],rate:(4+((r[0]*7)%10)/10).toFixed(1),rev:12+(r[0]*37)%180}));
+const $=s=>document.querySelector(s),fmt=n=>n.toLocaleString('en-US');
+const ico=(c,s=18)=>`<svg width="${s}" height="${s}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">${ICO[c]}</svg>`;
+const store={get(k,d){try{return JSON.parse(localStorage.getItem(k))??d}catch(e){return d}},set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
+let cart=store.get('sp3_cart',{}),favs=store.get('sp3_favs',[]),state={cat:null,vehicle:null,favOnly:false},shown=9;
+
+/* ---------------- part illustrations (all in a 200×200 box) ---------------- */
+function gearPath(cx,cy,r,t,depth=.16,hole=.32){let d='';const n=t*4;for(let i=0;i<n;i++){const a=i/n*Math.PI*2,rr=(i%4<2)?r:r*(1-depth);d+=(i?'L':'M')+(cx+rr*Math.cos(a)).toFixed(1)+','+(cy+rr*Math.sin(a)).toFixed(1)}const h=r*hole;return d+`ZM${cx+h},${cy}a${h},${h} 0 1,0 ${-2*h},0a${h},${h} 0 1,0 ${2*h},0Z`}
+const gear=(cx,cy,r,t,f='#6a6a6a')=>`<g filter="url(#sh)"><path d="${gearPath(cx,cy,r,t)}" fill="${f}" fill-rule="evenodd"/><circle cx="${cx}" cy="${cy}" r="${r*.6}" fill="none" stroke="rgba(255,255,255,.22)" stroke-width="${r*.06}"/></g>`;
+function disc(cx,cy,r,cal=true){let v='',h='';for(let i=0;i<28;i++){const a=i/28*Math.PI*2;v+=`<line x1="${cx+r*.52*Math.cos(a)}" y1="${cy+r*.52*Math.sin(a)}" x2="${cx+r*.94*Math.cos(a+.22)}" y2="${cy+r*.94*Math.sin(a+.22)}" stroke="rgba(0,0,0,.16)" stroke-width="${r*.02}"/>`}
+ for(let i=0;i<5;i++){const a=i/5*Math.PI*2;h+=`<circle cx="${cx+r*.25*Math.cos(a)}" cy="${cy+r*.25*Math.sin(a)}" r="${r*.05}" fill="#2a2a2a"/>`}
+ return `<g filter="url(#sh)"><circle cx="${cx}" cy="${cy}" r="${r}" fill="url(#metal)"/>${v}<circle cx="${cx}" cy="${cy}" r="${r*.46}" fill="#9a9a9a"/><circle cx="${cx}" cy="${cy}" r="${r*.4}" fill="url(#metal2)"/>${h}<circle cx="${cx}" cy="${cy}" r="${r*.12}" fill="#333"/>${cal?`<path d="M${cx+r*.55},${cy-r*.95} a${r*1.02},${r*1.02} 0 0 1 ${r*.5},${r*.55} l-${r*.28},${r*.18} a${r*.7},${r*.7} 0 0 0 -${r*.36},-${r*.42}z" fill="url(#caliper)"/><text x="${cx+r*.78}" y="${cy-r*.55}" font-size="${r*.12}" fill="#fff" font-weight="700" font-family="system-ui" transform="rotate(38 ${cx+r*.78} ${cy-r*.55})">SEOUL</text>`:''}</g>`}
+function filterCan(x,y,w,h,orange){let g='';for(let i=0;i<14;i++)g+=`<rect x="${x+4+i*(w-8)/14}" y="${y+h*.12}" width="${(w-8)/28}" height="${h*.12}" fill="rgba(0,0,0,.25)"/>`;
+ return `<g filter="url(#sh)"><rect x="${x}" y="${y+h*.1}" width="${w}" height="${h*.9}" rx="${w*.08}" fill="url(#${orange?'orangeC':'metalV'})"/>${g}<ellipse cx="${x+w/2}" cy="${y+h*.1}" rx="${w/2}" ry="${h*.08}" fill="#c4c4c4"/><ellipse cx="${x+w/2}" cy="${y+h*.1}" rx="${w*.22}" ry="${h*.035}" fill="#444"/><rect x="${x}" y="${y+h*.55}" width="${w}" height="${h*.18}" fill="rgba(255,255,255,.2)"/></g>`}
+function spring(x,y,h,w){let d=`M${x},${y}`;for(let i=1;i<=18;i++)d+=`L${x+(i%2?w:0)},${y+i*h/18}`;return `<g filter="url(#sh)"><rect x="${x+w/2-6}" y="${y-18}" width="12" height="${h+36}" rx="5" fill="url(#metalV)"/><path d="${d}" fill="none" stroke="#c0291f" stroke-width="9" stroke-linecap="round"/><path d="${d}" fill="none" stroke="#ff6a5a" stroke-width="3" stroke-linecap="round"/><rect x="${x-8}" y="${y-22}" width="${w+16}" height="8" rx="3" fill="#555"/><rect x="${x-8}" y="${y+h+14}" width="${w+16}" height="8" rx="3" fill="#555"/></g>`}
+const battery=()=>`<g filter="url(#sh)"><rect x="35" y="60" width="130" height="95" rx="8" fill="#1d1d1d"/><rect x="35" y="60" width="130" height="22" rx="8" fill="#333"/><rect x="55" y="48" width="20" height="14" rx="3" fill="#c0291f"/><rect x="125" y="48" width="20" height="14" rx="3" fill="#888"/><rect x="50" y="98" width="100" height="40" rx="6" fill="#E2F23A"/><text x="100" y="124" font-size="16" font-weight="800" text-anchor="middle" font-family="system-ui" fill="#111">70Ah</text></g>`;
+const headlight=()=>`<g filter="url(#sh)"><path d="M25,120 C25,80 60,55 120,55 L175,62 C182,64 184,72 180,80 L150,140 C146,147 140,150 132,150 L45,150 C33,150 25,138 25,120Z" fill="#1e1e1e"/><path d="M38,118 C40,90 66,72 118,70 L165,75 L140,132 L52,135 C44,135 38,128 38,118Z" fill="url(#glass)"/><circle cx="80" cy="104" r="20" fill="url(#metal2)"/><circle cx="80" cy="104" r="9" fill="#fff"/><circle cx="125" cy="104" r="14" fill="url(#metal2)"/><path d="M48,128 L138,124" stroke="#E2F23A" stroke-width="4" stroke-linecap="round"/></g>`;
+function fan(){let b='';for(let i=0;i<7;i++)b+=`<path d="M100,100 C108,70 135,58 150,66 C140,82 122,96 100,100Z" fill="#3a3a3a" transform="rotate(${i*360/7} 100 100)"/>`;return `<g filter="url(#sh)"><rect x="22" y="22" width="156" height="156" rx="18" fill="#222"/><circle cx="100" cy="100" r="68" fill="#111"/>${b}<circle cx="100" cy="100" r="14" fill="url(#metal2)"/></g>`}
+function rim(cx,cy,r){let s='';for(let i=0;i<5;i++){const a=i*72;s+=`<path d="M${cx},${cy-r*.2} L${cx-r*.14},${cy-r*.86} L${cx+r*.14},${cy-r*.86}Z" fill="url(#metal)" transform="rotate(${a} ${cx} ${cy})"/><path d="M${cx},${cy-r*.2} L${cx+r*.22},${cy-r*.82} L${cx+r*.32},${cy-r*.76}Z" fill="#9a9a9a" transform="rotate(${a} ${cx} ${cy})"/>`}
+ return `<g filter="url(#sh)"><circle cx="${cx}" cy="${cy}" r="${r*1.25}" fill="#151515"/><circle cx="${cx}" cy="${cy}" r="${r*1.18}" fill="none" stroke="#2a2a2a" stroke-width="${r*.05}" stroke-dasharray="${r*.08} ${r*.06}"/><circle cx="${cx}" cy="${cy}" r="${r}" fill="#2a2a2a"/><circle cx="${cx}" cy="${cy}" r="${r*.94}" fill="none" stroke="url(#metal)" stroke-width="${r*.08}"/>${s}<circle cx="${cx}" cy="${cy}" r="${r*.22}" fill="url(#metal2)"/><circle cx="${cx}" cy="${cy}" r="${r*.08}" fill="#E2F23A"/></g>`}
+const clutch=()=>`<g filter="url(#sh)"><circle cx="100" cy="100" r="80" fill="url(#metal)"/><circle cx="100" cy="100" r="62" fill="#5a4a3a"/><circle cx="100" cy="100" r="58" fill="none" stroke="#7a6a5a" stroke-width="3" stroke-dasharray="6 5"/><circle cx="100" cy="100" r="36" fill="url(#metal2)"/>${[0,60,120,180,240,300].map(a=>`<rect x="96" y="40" width="8" height="22" rx="3" fill="#aaa" transform="rotate(${a} 100 100)"/>`).join('')}<circle cx="100" cy="100" r="12" fill="#333"/></g>`;
+const PART={brakes:()=>disc(100,100,78),filters:()=>filterCan(55,25,90,155,true),engine:()=>gear(100,100,78,15,'#555')+`<circle cx="100" cy="100" r="16" fill="#E2F23A"/>`,trans:()=>clutch(),suspension:()=>spring(78,40,120,44),electrical:battery,body:headlight,ac:fan};
+const partSvg=(c,cls='part')=>`<svg class="${cls}" viewBox="0 0 200 200" aria-hidden="true">${PART[c]()}</svg>`;
+
+/* car silhouette for hero */
+function car(){return `<g transform="translate(15,140) scale(.6)">
+ <ellipse cx="300" cy="300" rx="330" ry="26" fill="#000" opacity=".8"/>
+ <path d="M20,250 C20,215 40,198 80,190 L180,172 L265,110 C285,96 310,88 340,88 L470,88 C500,88 525,96 545,112 L610,170 L660,182 C690,190 705,210 705,240 L705,275 L20,275Z" fill="url(#carBody)"/>
+ <path d="M285,118 C300,106 318,100 340,100 L405,100 L405,170 L215,172Z" fill="url(#glass)"/>
+ <path d="M420,100 L470,100 C492,100 512,107 528,120 L580,170 L420,170Z" fill="url(#glass)"/>
+ <path d="M60,200 L690,200" stroke="#E2F23A" stroke-width="2" opacity=".55"/>
+ <path d="M40,212 C120,206 160,206 200,210" stroke="#fff" stroke-width="3" opacity=".25"/>
+ <rect x="640" y="198" width="55" height="14" rx="5" fill="#E2F23A" opacity=".9"/>
+ <rect x="22" y="200" width="30" height="12" rx="4" fill="#c0291f"/>
+ <path d="M215,172 L590,172" stroke="#000" stroke-width="3"/><path d="M412,100 L412,272" stroke="#000" stroke-width="2" opacity=".6"/>
+ ${rim(170,262,52)}${rim(570,262,52)}
+</g>`}
+const _unusedHero=`<rect width="820" height="540" fill="#0E0E0E"/><circle cx="200" cy="280" r="300" fill="url(#glow)"/><g opacity=".06" stroke="#fff">${Array.from({length:14},(_,i)=>`<line x1="0" y1="${i*40}" x2="820" y2="${i*40-120}"/>`).join('')}</g>`+car()+`<rect width="820" height="540" fill="url(#fade)"/>`;
+
+$('#deal1').innerHTML=disc(100,100,85);
+$('#deal2').innerHTML=filterCan(55,25,90,155,true);
+$('#bandArt').innerHTML=rim(250,250,170);
+const _unusedBan=`<rect width="600" height="240" fill="#0E0E0E"/><circle cx="300" cy="120" r="200" fill="url(#glow)"/><g transform="translate(60,20) scale(.95)">${filterCan(30,30,80,150,true)}</g><g transform="translate(170,10)">${disc(100,110,95)}</g><g transform="translate(380,30) scale(.9)">${battery()}</g><rect width="600" height="240" fill="url(#fade)" transform="scale(-1 1) translate(-600 0)"/>`;
+
+/* ---------------- hero photo slider ---------------- */
+const HS=[{img:'elantra-n',mk:'hyundai',md:'النترا',t:'هيونداي <b>النترا</b>',pos:'30% 60%'},{img:'tucson',mk:'hyundai',md:'توسان',t:'هيونداي <b>توسان</b>',pos:'35% 55%'},{img:'sorento',mk:'kia',md:'سورينتو',t:'كيا <b>سورينتو</b>',pos:'35% 50%'},{img:'genesis-g80',mk:'genesis',md:'G80',t:'جينيسيس <b>G80</b>',pos:'40% 60%'}];
+$('#heroSlides').innerHTML=HS.map((s,i)=>`<div class="hslide${i?'':' on'}" style="background-image:url(img/${s.img}${s.img==='sorento'?'':'.webp'}${s.img==='sorento'?'.webp':''});background-position:${s.pos}"></div>`).join('');
+let hi=0,hT;
+function heroShow(i){hi=(i+HS.length)%HS.length;document.querySelectorAll('.hslide').forEach((e,j)=>e.classList.toggle('on',j===hi));$('#hLbl').innerHTML='قطع '+HS[hi].t;$('#hDots').innerHTML=HS.map((_,j)=>`<button class="${j===hi?'on':''}" aria-label="صورة ${j+1}" onclick="heroShow(${j});heroAuto()"></button>`).join('')}
+function heroAuto(){clearInterval(hT);if(!matchMedia('(prefers-reduced-motion: reduce)').matches)hT=setInterval(()=>heroShow(hi+1),5500)}
+heroShow(0);heroAuto();
+['توسان','سورينتو','G80'].forEach(m=>{const el=document.getElementById('cnt-'+m);if(el)el.textContent=P.filter(p=>p.models.includes(m)).length+' قطعة متوفرة'});
+document.getElementById('allMods').innerHTML=Object.entries(MAKES).flatMap(([k,v])=>v.models.filter(m=>!['النترا','توسان','سورينتو','G80'].includes(m)).slice(0,3).map(m=>`<span onclick="event.stopPropagation();pickCar('${k}','${m}')" style="cursor:pointer">${m}</span>`)).join('');
+function pickCar(mk,md){$('#hMake').value=mk;fillModels('hMake','hModel');$('#hModel').value=md;$('#hYear').value='';$('#hCat').value='';applyVehicle()}
+
+/* ---------------- nav, bento, rail, brands, blog ---------------- */
+const cnt=c=>P.filter(p=>p.cat===c).length;
+/* mega menu */
+$('#mcols').innerHTML=Object.entries(CATS).map(([k,v])=>{const names=[...new Set(P.filter(p=>p.cat===k).sort((a,b)=>b.pop-a.pop).map(p=>p.name.replace(/ \(.*\)| أصلي| أمامي.*| خلفي.*| يمين.*| يسار.*/g,'')))].slice(0,4);
+ return `<div class="mcat"><button onclick="closeMega();setCat('${k}')"><span class="mi">${ico(k)}</span><span><b>${v.ar}</b><small>${cnt(k)} قطعة</small></span></button><ul>${names.map(n=>`<li><button onclick="closeMega();state.cat='${k}';drawChips();q.value='${n}';render();go('shop')">${n}</button></li>`).join('')}</ul></div>`}).join('');
+$('#mbrands').innerHTML=Object.entries(MAKES).map(([k,v])=>`<button onclick="closeMega();setMake('${k}')">${v.ar}</button>`).join('');
+$('#mgrid').innerHTML=Object.entries(CATS).map(([k,v])=>`<button onclick="closeAll();setCat('${k}')">${ico(k,16)}${v.ar}</button>`).join('');
+let megaT;
+let megaAt=0;
+function openMega(){if(!$('#mega').classList.contains('on'))megaAt=Date.now();$('#mega').classList.add('on');$('#mback').classList.add('on');$('#catBtn').setAttribute('aria-expanded','true')}
+function closeMega(){$('#mega').classList.remove('on');$('#mback').classList.remove('on');$('#catBtn').setAttribute('aria-expanded','false')}
+function toggleMega(){$('#mega').classList.contains('on')&&Date.now()-megaAt>400?closeMega():openMega()}
+if(matchMedia('(hover:hover)').matches){const cb=$('#catBtn'),mg=$('#mega');[cb,mg].forEach(el=>{el.addEventListener('mouseenter',()=>{clearTimeout(megaT);openMega()});el.addEventListener('mouseleave',()=>{megaT=setTimeout(closeMega,220)})})}
+function openMM(){$('#mmenu').classList.add('on');$('#ov').classList.add('on')}
+/* active link on scroll */
+const navA=[...document.querySelectorAll('#navlinks a')];
+addEventListener('scroll',()=>{let cur='top';navA.forEach(a=>{const el=document.getElementById(a.dataset.s);if(el&&el.getBoundingClientRect().top<160)cur=a.dataset.s});navA.forEach(a=>a.classList.toggle('on',a.dataset.s===cur))},{passive:true});
+navA[0].classList.add('on');
+const arrowGo=`<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M17 7 7 17M7 7v10h10"/></svg>`;
+function bc(k,cls,art){return `<button class="bc ${cls}" data-c="${k}" onclick="setCat('${k}')">${art?`<svg class="art" viewBox="0 0 200 200" aria-hidden="true">${PART[k]()}</svg>`:''}<span class="ic">${ico(k)}</span><div style="position:relative"><b>${CATS[k].ar}</b><span style="display:block">${CATS[k].d}</span></div><span class="circ ${cls.includes('dark')?'w':'b'} go">${arrowGo}</span></button>`}
+$('#bento').innerHTML=bc('engine','big',1)+bc('brakes','dark',1)+bc('filters','sm',1)+bc('suspension','sm',1)+bc('electrical','sm',1)+`<button class="bc lime" onclick="resetFilters();go('shop')"><span class="circ b">${arrowGo}</span><b>عرض كل الأقسام</b><span style="color:#333">${P.length} قطعة · ${Object.keys(CATS).length} أقسام</span></button>`;
+$('#rail').innerHTML=[...P].sort((a,b)=>b.pop-a.pop).slice(0,10).map(card).join('');
+function railGo(d){const r=$('#rail');r.scrollBy({left:d*250,behavior:'smooth'})}
+$('#brandGrid').innerHTML=Object.entries(MAKES).map(([k,v])=>`<button class="brand car" onclick="setMake('${k}')"><div>${v.en}<small>${P.filter(p=>p.make===k).length} قطعة</small></div></button>`).join('')+['MOBIS','MANDO','VALEO','SANGSIN','NGK','BOSCH','DENSO','GATES'].map(b=>`<div class="brand">${b}</div>`).join('');
+const POSTS=[['img:parts','١٢ نوفمبر ٢٠٢٦','متى تغيّر فحمات الفرامل في سيارتك الكورية؟','علامات تقول لك إن الفحمات انتهت، والفرق بين السيراميك والعادي.'],['img:elantra-n-sm','٥ نوفمبر ٢٠٢٦','أصلي ولا تجاري؟ كيف تختار صح','متى يستاهل تدفع زيادة على قطعة الوكالة، ومتى التجاري المعتمد يكفي.'],['img:tucson-sm','٢٨ أكتوبر ٢٠٢٦','كيف تقرأ رقم الشاصي (VIN) لسيارتك','وش تعني كل خانة من الـ١٧ خانة، وليش هو أهم شي عند طلب القطعة.']];
+$('#posts').innerHTML=POSTS.map(p=>`<article class="post"><div class="th"><img src="img/${p[0].slice(4)}.webp" alt=""></div><div><small>${p[1]}</small><h3>${p[2]}</h3><p>${p[3]}</p></div></article>`).join('');
+
+/* ---------------- selects & filters ---------------- */
+function opts(el,arr,first){el.innerHTML=(first?`<option value="">${first}</option>`:'')+arr.map(a=>`<option value="${a[0]}">${a[1]}</option>`).join('')}
+function fillModels(mk,md){const m=$('#'+mk).value;opts($('#'+md),m?MAKES[m].models.map(x=>[x,x]):[],'كل الموديلات')}
+opts($('#hMake'),Object.entries(MAKES).map(([k,v])=>[k,v.ar]),'اختر الماركة');fillModels('hMake','hModel');
+opts($('#hYear'),Array.from({length:16},(_,i)=>[2026-i,2026-i]),'كل السنوات');
+opts($('#hCat'),Object.entries(CATS).map(([k,v])=>[k,v.ar]),'كل الأقسام');
+$('#fMake').innerHTML=Object.entries(MAKES).map(([k,v])=>`<label class="chk"><input type="checkbox" class="fMake" value="${k}" onchange="syncModel();render()"> ${v.ar}<span class="c">${P.filter(p=>p.make===k).length}</span></label>`).join('');
+function syncModel(){const ms=[...document.querySelectorAll('.fMake:checked')].map(x=>x.value);opts($('#fModel'),(ms.length?ms:Object.keys(MAKES)).flatMap(m=>MAKES[m].models).map(x=>[x,x]),'كل الموديلات')}
+syncModel();
+function drawChips(){$('#chips').innerHTML=`<button class="${!state.cat?'on':''}" onclick="state.cat=null;drawChips();render()">الكل</button>`+Object.entries(CATS).map(([k,v])=>`<button class="${state.cat===k?'on':''}" onclick="state.cat='${k}';drawChips();render()">${v.ar}</button>`).join('');
+ document.querySelectorAll('.bc[data-c]').forEach(b=>b.classList.toggle('on',b.dataset.c===state.cat))}
+const go=id=>document.getElementById(id).scrollIntoView();
+function setCat(c){state.cat=c;drawChips();render();go('shop')}
+function setMake(m){document.querySelectorAll('.fMake').forEach(x=>x.checked=x.value===m);syncModel();render();go('shop')}
+function applyVehicle(){const mk=$('#hMake').value;if(!mk){toast('اختر الماركة أولاً');return}
+ const md=$('#hModel').value,yr=$('#hYear').value,c=$('#hCat').value;state.vehicle={mk,md,yr};
+ document.querySelectorAll('.fMake').forEach(x=>x.checked=x.value===mk);syncModel();$('#fModel').value=md;if(c)state.cat=c;drawChips();
+ $('#vehTxt').textContent='سيارتك: '+MAKES[mk].ar+(md?' '+md:'')+(yr?' '+yr:'');$('#vehChip').classList.add('on');render();go('shop')}
+function clearVehicle(){state.vehicle=null;$('#vehChip').classList.remove('on');resetFilters()}
+function heroSearch(){$('#q').value=$('#hq').value;render();go('shop')}
+function yearOk(p,y){if(!y)return true;const m=p.years.match(/(\d{4})–(\d{4})/);return !m||(y>=+m[1]&&y<=+m[2])}
+function resetFilters(){document.querySelectorAll('.fMake').forEach(x=>x.checked=false);document.querySelectorAll('.fType').forEach(x=>x.checked=true);syncModel();$('#fPrice').value=2000;$('#pv').textContent=2000;$('#fStock').checked=false;$('#q').value='';state.cat=null;state.favOnly=false;if(state.vehicle){state.vehicle=null;$('#vehChip').classList.remove('on')}drawChips();render()}
+function render(keep){if(!keep)shown=9;
+ const q=$('#q').value.trim().toLowerCase(),ms=[...document.querySelectorAll('.fMake:checked')].map(x=>x.value),md=$('#fModel').value,ts=[...document.querySelectorAll('.fType:checked')].map(x=>x.value),mx=+$('#fPrice').value,inS=$('#fStock').checked,yr=state.vehicle?.yr;
+ let list=P.filter(p=>(!ms.length||ms.includes(p.make))&&(!md||p.models.includes(md))&&ts.includes(p.type)&&p.price<=mx&&(!inS||p.stock>0)&&(!state.cat||p.cat===state.cat)&&yearOk(p,yr)&&(!state.favOnly||favs.includes(p.id))
+  &&(!q||(p.name+' '+p.pn+' '+p.models.join(' ')+' '+MAKES[p.make].ar+' '+CATS[p.cat].ar).toLowerCase().includes(q)||p.pn.replace(/-/g,'').toLowerCase().includes(q.replace(/-/g,''))));
+ const s=$('#sort').value;list.sort((a,b)=>s==='lo'?a.price-b.price:s==='hi'?b.price-a.price:b.pop-a.pop);
+ $('#count').textContent=(state.favOnly?'المفضلة: ':'')+list.length+' قطعة';
+ $('#more').hidden=list.length<=shown;$('#more').textContent='عرض المزيد ('+(list.length-shown)+')';
+ const page=list.slice(0,shown);
+ $('#grid').innerHTML=page.length?page.map(card).join(''):`<div class="empty"><b>ما لقينا قطع مطابقة</b>أرسل لنا رقم الشاصي واسم القطعة ونوفّرها لك.<div style="margin-top:14px;display:flex;gap:8px;justify-content:center;flex-wrap:wrap"><a href="#vin" class="btn btn-lime">اطلب بالشاصي</a><button class="btn btn-line" onclick="resetFilters()">مسح الفلاتر</button></div></div>`}
+function card(p){
+ const st=p.stock===0?['out','غير متوفر حالياً']:p.stock<=8?['lo','باقي '+p.stock+' فقط']:['in','متوفر'];
+ const tag=p.tag==='خصم'?`<span class="ptag sale">خصم ${Math.round((1-p.price/p.old)*100)}٪</span>`:p.tag?`<span class="ptag">${p.tag}</span>`:`<span class="ptag ${p.type==='oem'?'oem':''}">${p.type==='oem'?'أصلي':'تجاري معتمد'}</span>`;
+ const f=favs.includes(p.id);
+ return `<article class="pcard"><div class="pimg">${tag}<button class="fav ${f?'on':''}" aria-label="المفضلة" onclick="toggleFav(${p.id})"><svg width="16" height="16" viewBox="0 0 24 24" fill="${f?'currentColor':'none'}" stroke="currentColor" stroke-width="2"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8z"/></svg></button>${partSvg(p.cat)}</div>
+ <div class="pbody"><span class="pmk">${MAKES[p.make].ar} · ${CATS[p.cat].ar}</span><h3>${p.name}</h3><div class="pn">رقم القطعة: <b class="num">${p.pn}</b></div>
+ <div class="fits">يركب على: ${p.models.join('، ')} (${p.years})</div><div class="stock ${st[0]}">${st[1]}</div>
+ <div class="pfoot"><div class="price">${p.old?`<s class="num">${fmt(p.old)}</s>`:''}<b class="num">${fmt(p.price)}</b> <small>ر.س</small></div>
+ ${p.stock>0?`<button class="add" onclick="add(${p.id})">+ أضف للسلة</button>`:`<button class="add ghost" onclick="wa('أبي أطلب قطعة غير متوفرة: ${p.name} - ${p.pn}')">اطلبها لي</button>`}</div></div></article>`}
+function toggleFav(id){favs=favs.includes(id)?favs.filter(x=>x!==id):[...favs,id];store.set('sp3_favs',favs);updBadges();render(true);$('#rail').innerHTML=[...P].sort((a,b)=>b.pop-a.pop).slice(0,10).map(card).join('');toast(favs.includes(id)?'أُضيفت للمفضلة':'أُزيلت من المفضلة')}
+function showFavs(){if(!favs.length){toast('قائمة المفضلة فارغة');return}resetFilters();state.favOnly=true;render();go('shop')}
+
+/* ---------------- cart ---------------- */
+function add(id){const p=P.find(x=>x.id===id);cart[id]=(cart[id]||0)+1;if(cart[id]>p.stock){cart[id]=p.stock;toast('هذي كل الكمية المتوفرة')}else toast('أُضيفت للسلة ✓');saveCart()}
+function setQ(id,d){const p=P.find(x=>x.id===id);cart[id]=Math.min((cart[id]||0)+d,p.stock);if(cart[id]<=0)delete cart[id];saveCart();drawCart()}
+function saveCart(){store.set('sp3_cart',cart);updBadges()}
+function updBadges(){const n=Object.values(cart).reduce((a,b)=>a+b,0);$('#cartCount').textContent=n;$('#cartCount').hidden=!n;$('#favCount').textContent=favs.length;$('#favCount').hidden=!favs.length}
+function totals(){const sub=Object.entries(cart).reduce((a,[id,q])=>a+P.find(p=>p.id==id).price*q,0),ship=!sub||sub>=300?0:25;return{sub,ship,tot:sub+ship}}
+function drawCart(){const items=Object.entries(cart);
+ if(!items.length){$('#cartBody').innerHTML='<div style="text-align:center;padding:50px 10px;color:var(--muted)"><b style="display:block;color:#111;font-size:17px;margin-bottom:6px">السلة فارغة</b>أضف القطع اللي تحتاجها وارجع هنا.</div>';$('#cartFoot').innerHTML='<button class="btn btn-lime" style="width:100%" onclick="closeAll();go(\'shop\')">تصفّح القطع</button>';return}
+ $('#cartBody').innerHTML=items.map(([id,q])=>{const p=P.find(x=>x.id==id);return`<div class="ci"><div class="th">${partSvg(p.cat,'')}</div><div class="info"><b>${p.name}</b><small>${MAKES[p.make].ar} · <span class="num">${p.pn}</span></small><div><span class="qty"><button onclick="setQ(${p.id},1)" aria-label="زيادة">+</button><span class="num">${q}</span><button onclick="setQ(${p.id},-1)" aria-label="إنقاص">−</button></span><button class="rm" onclick="setQ(${p.id},-999)">حذف</button></div></div><b class="num">${fmt(p.price*q)} ر.س</b></div>`}).join('');
+ const t=totals();
+ $('#cartFoot').innerHTML=`<div class="row2"><span>المجموع</span><span class="num">${fmt(t.sub)} ر.س</span></div><div class="row2"><span>التوصيل</span><span>${t.ship?'<span class="num">'+t.ship+'</span> ر.س':'مجاني'}</span></div>${t.ship?`<div style="font-size:12.5px;color:var(--muted)">أضف <span class="num">${fmt(300-t.sub)}</span> ر.س للحصول على توصيل مجاني</div>`:''}<div class="row2 t"><span>الإجمالي (شامل الضريبة)</span><span class="num">${fmt(t.tot)} ر.س</span></div>
+ <div style="margin:10px 0"><label class="f" for="cVin">رقم الشاصي (اختياري — للتأكد من التوافق)</label><input class="inp num" style="text-align:right;text-transform:uppercase" id="cVin" maxlength="17"></div>
+ <button class="btn btn-wa" style="width:100%" onclick="checkout()">إتمام الطلب عبر واتساب</button>`}
+function checkout(){const t=totals(),v=($('#cVin')?.value||'').toUpperCase();const lines=Object.entries(cart).map(([id,q])=>{const p=P.find(x=>x.id==id);return`• ${p.name} (${p.pn}) × ${q} = ${p.price*q} ر.س`});wa(`السلام عليكم، أبي أطلب:\n${lines.join('\n')}\nالإجمالي: ${t.tot} ر.س${v?'\nرقم الشاصي: '+v:''}`)}
+function openCart(){drawCart();$('#cart').classList.add('on');$('#ov').classList.add('on')}
+function openModal(id){$('#'+id).classList.add('on');$('#ov').classList.add('on')}
+function closeAll(){document.querySelectorAll('.drawer,.modal,.ov,.filters,.mmenu').forEach(e=>e.classList.remove('on'));closeMega()}
+function toggleFilters(on){$('#filters').classList.toggle('on',on);$('#ov').classList.toggle('on',on)}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeAll()});
+
+/* ---------------- misc ---------------- */
+function wa(msg){const a=document.createElement('a');a.href='https://wa.me/'+WA+'?text='+encodeURIComponent(msg);a.target='_blank';a.rel='noopener';document.body.appendChild(a);a.click();a.remove();return false}
+function vinSubmit(e){e.preventDefault();wa(`طلب قطعة برقم الشاصي\nالاسم: ${vName.value}\nالجوال: ${vPhone.value}\nرقم الشاصي: ${vVin.value.toUpperCase()}\nالقطع: ${vPart.value}`);$('#vinOk').classList.add('on');return false}
+function b2bSubmit(e){e.preventDefault();wa(`طلب أسعار جملة\nالمنشأة: ${bCo.value}\nالنشاط: ${bType.value}\nالمدينة: ${bCity.value}\nالجوال: ${bPhone.value}`);$('#b2bOk').classList.add('on');return false}
+function track(){const n=$('#tNo').value.trim().toUpperCase();if(n!=='SP-10482'){$('#tRes').innerHTML='<p style="color:var(--red);font-size:14px">ما لقينا طلب بهذا الرقم. تأكد من الرقم أو تواصل معنا بواتساب.</p>';return}
+ const s=[['done','تم استلام الطلب','١٤ نوفمبر · ٨:١٢ م'],['done','تمت مطابقة القطع بالشاصي','١٤ نوفمبر · ٩:٠٥ م'],['done','تم التغليف والشحن','١٥ نوفمبر · ١١:٣٠ ص'],['cur','في الطريق إليك','المتوقع: ١٧ نوفمبر'],['','تم التسليم','']];
+ $('#tRes').innerHTML=s.map(x=>`<div class="step ${x[0]}"><span class="d">${x[0]==='done'?'✓':''}</span><div><b>${x[1]}</b><span>${x[2]}</span></div></div>`).join('')}
+function copyCode(c){try{navigator.clipboard.writeText(c).then(()=>toast('تم نسخ الكود: '+c),()=>toast('الكود: '+c))}catch(e){toast('الكود: '+c)}}
+let tt;function toast(m){const t=$('#toast');t.textContent=m;t.classList.add('on');clearTimeout(tt);tt=setTimeout(()=>t.classList.remove('on'),2200)}
+const end=new Date();end.setDate(end.getDate()+3);end.setHours(23,59,59);
+function cd(){let s=Math.max(0,(end-new Date())/1000|0);const d=s/86400|0;s%=86400;const h=s/3600|0;s%=3600;const m=s/60|0;s%=60;$('#cd').innerHTML=[[d,'يوم'],[h,'ساعة'],[m,'دقيقة'],[s,'ثانية']].map(x=>`<div><b class="num">${String(x[0]).padStart(2,'0')}</b><span>${x[1]}</span></div>`).join('')}
+cd();setInterval(cd,1000);
+drawChips();updBadges();render();
+</script>
+</body>
+</html>
